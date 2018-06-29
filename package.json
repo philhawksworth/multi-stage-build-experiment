@@ -1,20 +1,17 @@
 {
-  "name": "EleventyOne",
-  "version": "1.0.1",
-  "description": "A project bootstrap for Eleventy sites. With pipelines for Sass, Js, and Lambdas",
+  "name": "Multistage-test",
+  "version": "0.0.1",
+  "description": "experimenting with branches as CI stages",
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
-    "gen": "gulp generate",
     "start": "yarn run build && yarn run serve",
-    "build": "gulp build && yarn run build:functions",
-    "build:local": "gulp build:local",
-    "build:functions": "netlify-lambda build src/lambda",
-    "serve": "gulp watch & gulp serve & netlify-lambda serve src/lambda"
+    "build": "gulp build",
+    "serve": "gulp watch & gulp serve"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philhawksworth/eleventyone"
+    "url": "https://github.com/philhawksworth/multi-stage-build-experiment"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.4.0",
@@ -31,6 +28,7 @@
     "gulp-uglify": "^3.0.0",
     "netlify-lambda": "^0.2.0",
     "pump": "^3.0.0",
-    "require-dir": "^1.0.0"
+    "require-dir": "^1.0.0",
+    "simple-git": "^1.96.0"
   }
 }

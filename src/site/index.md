@@ -1,34 +1,12 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.
+title: Multi stage build experiment
+subtitle: Let's see if this works out
 layout: layouts/base.njk
 ---
 
 
-## This site is a starting point
+## What if?
 
-From this point we should already have:
-
-- [Eleventy](https://11ty.io) with a skeleton site
-- A date format filter for Nunjucks
-- Sass pipeline
-- JS pipeline
-- JS [search index](/search.json) generator
-- Serverless (FaaS) development pipeline with Netlify Functions for Lambda
-
-
-## Post pages
-
-The pages found in in the posts
-
-<ul class="listing">
-{%- for page in collections.post -%}
-  <li>
-    <a href="{{ page.url }}">{{ page.data.title }}</a> -
-    <time datetime="{{ page.date }}">{{ page.date | dateDisplay }}</time>
-  </li>
-{%- endfor -%}
-</ul>
-
-
+- What if this site built in Netlify CI, and when it was deployed, it fired a webhook to another netlify branch?
+- What of the second Netlify branch ran some automated visual testing against the URL of this site, and if everything passed, it deployed the latest version?
 
