@@ -5,7 +5,7 @@ var shell = require('gulp-shell');
 // /*
 //  Run our static site generator to build the pages
 // */
-gulp.task('test:stage', shell.task('git branch'));
+gulp.task('test:stage', shell.task('git pull & git checkout production & git merge master'));
 
 
 
